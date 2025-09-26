@@ -1,4 +1,4 @@
-const initialTodos = [
+export const initialTodos = [
   {
     id: "7cec7373-681b-49d9-b065-021d61a69d03",
     name: "Read the sprint's theory",
@@ -19,13 +19,10 @@ const initialTodos = [
   },
 ];
 
-const validationConfig = {
-  formSelector: ".popup__form",
+export const validationConfig = {
   inputSelector: ".popup__input",
-  submitButtonSelector: ".popup__button",
-  errorClass: "popup__error_visible",
-  inputErrorClass: "popup__input_type_error",
+  submitButtonSelector: ".button_action_add",
   inactiveButtonClass: "button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
 };
-
-export { initialTodos, validationConfig };

@@ -11,6 +11,10 @@ class Todo {
 
     this._todoCheckboxEl.addEventListener("change", () => {
       this._data.completed = !this._data.completed;
+      this._todoNameEl.classList.toggle(
+        "todo__name_completed",
+        this._data.completed
+      );
     });
   }
 
