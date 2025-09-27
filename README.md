@@ -16,3 +16,5 @@ This project is deployed on GitHub Pages:
 
 - ADD LINK HERE
   (https://delmasc.github.io/se_project_todo-app/)
+
+removed the duplicate files
