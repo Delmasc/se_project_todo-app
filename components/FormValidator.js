@@ -51,7 +51,7 @@ class FormValidator {
       this._buttonElement.disabled = true;
     } else {
       this._buttonElement.classList.remove(this._inactiveButtonClass);
-      this._buttonElement.disabled = false;
+      this._buttonElement.disabled();
     }
   }
 
@@ -80,13 +80,22 @@ class FormValidator {
     this._setEventListeners();
   }
 
-  resetValidation() {
-    this._inputList.forEach((input) => {
-      this._hideInputError(input);
-    });
+  _disableSubmitButton() {
     if (this._buttonElement) {
-      this._toggleButtonState();
+      this._buttonElement.classList.add(this.inactiveButtonClass);
+      this._buttonElement.disabled = true;
     }
+  }
+  _enableSubmitButton() {
+    if (this._buttonElement) {
+      this._buttonElement.classList.add(this._inactiveButtonClass);
+      this._buttonElement.disabled = true;
+    }
+  }
+
+  resetValidation() {
+    this._formEl.reset();
+    this._disableSubmitButton();
   }
 }
 
